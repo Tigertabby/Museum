@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+/* Common styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-weight: 400;
+  font-family: 'Cinzel', serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.section-heading {
+  font-size: 12rem;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+}
+.section-heading1 {
+  font-size: 12rem;
+  font-weight: 900;
+  color: #79018C;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #fff;
+  padding-bottom: 10px;
+}
+/* End of Common Styles */
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  height: 12rem;
+  background-color: #FBFFE2;
+  position: fixed;
+  top: -14rem;
+  z-index: 150;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.2rem 0.2rem 0.2rem #FBFFE2;
+  /* text-align: center; */
+  transition: top 0.4s;
+}
+
+.navbar.change {
+  top: 0;
+  transition: top 0.4s 0.2s;
+}
+
+.navbar-link {
+  color: #79018C;
+  margin: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+  opacity: 0;
+  transition: color 0.3, opacity, 2s;
+}
+
+.change .navbar-link {
+  opacity: 1;
+}
+
+.change .navbar-link:nth-child(1) {
+  transition: opacity 0.4s 0.5s, color 0.3s;
+}
+
+.change .navbar-link:nth-child(2) {
+  transition: opacity 0.4s 0.6s, color 0.3s;
+}
+
+.change .navbar-link:nth-child(3) {
+  transition: opacity 0.4s 0.7s, color 0.3s;
+}
+
+.change .navbar-link:nth-child(4) {
+  transition: opacity 0.4s 0.8s, color 0.3s;
+}
+
+.change .navbar-link:nth-child(5) {
+  transition: opacity 0.4s 0.9s, color 0.3s;
+}
+
+.navbar-link:hover {
+  color: #aaa;
+}
+
+.navbar-link i {
+  font-size: 7rem;
+}
+
+.navbar-link span {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.menu {
+  width: 8rem;
+  height: 8rem;
+  background-color: #79018C;
+  position: fixed;
+  top: 1rem;
+  left: 5rem;
+  border-radius: 80rem 80rem 80rem 80rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem #000, -0.1rem -0.1rem 0.1rem #000;
+  cursor: pointer;
+  z-index: 100;
+  transition: top 0.4s 0.2s;
+}
+
+.menu.change {
+  top: 15rem;
+  transition: top 0.4s;
+}
+
+.menu::before {
+  content: "";
+  width: 0.3rem;
+  height: 15rem;
+  background-color: #FBFFE2;
+  position: absolute;
+  top: -15rem;
+  left: calc(50% - 0.15rem);
+  box-shadow: 0.1rem 0rem 0.1rem #000;
+
+}
+
+/* End of Navbar */
+
+/* Section 1 */
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  background: linear-gradient(rgba(31, 7, 7, 0.6), rgba(0, 0, 0, 0.6)),
+  url("future.jpg") center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.section-1-icons i {
+  font-size: 12rem;
+  color: #a79a2d;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+  transition: transform 0.3s;
+
+}
+
+.section-1-icons i.change {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s 0.3s;
+}
+/* End of Section 1 */
+
+/* Section 2 */
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #FBFFE2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rem 0;
+  color: #79018C;
+
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  /* padding: 0 5%; */
+}
+
+.card-wrapper {
+  perspective: 1000rem;
+}
+
+.card {
+  width: 30rem;
+  background-color: #A8ECE7;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1rem 1rem 1rem #000;
+  position: relative;
+  transform: rotateY(20deg) skewX(-2deg);
+  transition: transform 0.5s, box-shadow 0.5s;
+  color: #79018C;
+
+}
+
+.card:hover {
+  transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
+  box-shadow: 2rem 2rem 2rem #000;
+}
+
+.card::before {
+  content: "";
+  height: 100%;
+  width: 1rem;
+  background-color: #7267CB;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  transform: skewY(45deg);
+  transform-origin: right;
+  box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+
+.card::after {
+  content: "";
+  width: 100%;
+  height: 1rem;
+  background-color: #98BAE7;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  transform: skewX(45deg);
+  transform-origin: bottom;
+  box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-name {
+  font-size: 4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #32517D;
+  margin: 2rem 0;
+
+}
+
+.card-btn {
+  width: 70%;
+  background-color: #7267CB;
+  color: #FBFFE2;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  border: none;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  box-shadow: -0.2rem -0.2rem 0.2rem #000;
+}
+/* End of Section 2 */
+
+/* Section 3 */
+.section-3 {
+  background-color: #333;
+
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.gallery-link {
+  position: relative;
+  margin: 4rem 1rem;
+}
+
+.gallery-link::before {
+  content: "";
+  position: absolute;
+  top: 2vw;
+  left: 80%;
+  width: 0.2rem;
+  height: 0;
+  background-color: #fff;
+  z-index: 10;
+  transition: height 0.5s;
+}
+
+.gallery-link::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 2rem;
+  width: 0;
+  height: 0.2rem;
+  background-color: #fff;
+  transition: width 0.5s;
+}
+
+.gallery-link:hover::before {
+  height: 80%;
+}
+
+.gallery-link:hover::after {
+  width: 90%;
+}
+
+.food-img {
+  width: 24vw;
+  height: 15vw;
+  object-fit: cover;
+  box-shadow: 0.3rem 0.3rem 0.1rem #e92929, 0.5rem 0.5rem 0.1rem #a2e946,
+    0.7rem 0.7rem 0.1rem #297ce9, 0.9rem 0.9rem 0.1rem #e92999;
+  transition: all 0.5s;
+}
+
+.gallery-link:hover .food-img {
+  box-shadow: 1rem 1rem 0.1rem #e92929, 2rem 2rem 0.1rem #a2e946,
+    3rem 3rem 0.1rem #297ce9, 4rem 4rem 0.1rem #e92999;
+  transform: scale(1.1);
+  filter: blur(0.5rem);
+  opacity: 0.5;
+}
+
+.food-name {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.gallery-link:hover .food-name {
+  width: 100%;
+  transition: width 1.5s 0.5s;
+}
+
+.food-description {
+  position: absolute;
+  bottom: 3vw;
+  left: 2rem;
+  width: 70%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.gallery-link:hover .food-description {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s 1s;
+}
+/* End of Section 3 */
+
+/* Section 4 */
+
+.section-4 {
+  width: 100%;
+  height: 30vh;
+  background-color: #222;
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0;
+  position: relative;
+  align-items: flex-start;
+}
+
+.section-4-text {
+  text-transform: uppercase;
+}
+
+.section-4-heading {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #a79a2d;
+}
+
+.section-4-paragraph {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.signup-form {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+}
+
+.signup-form-input {
+  width: 35rem;
+  height: 5rem;
+  padding: 1rem;
+  border: 0.2rem solid #a79a2d;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: #a79a2d;
+}
+
+.signup-form-input::placeholder {
+  color: #a79a2d;
+}
+
+.signup-form-btn {
+  position: relative;
+  left: -4.5rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #333;
+  color: #a79a2d;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 3rem;
+  font-size: 1.7rem;
+  font-weight: 200;
+  color: #eee;
+  letter-spacing: 0.1rem;
+  border-top: 0.1rem solid #888;
+  padding-top: 6rem;
+  width: 100%;
+  text-align: center;
+}
+/* End of Section 4 */
+
+/* Responsive */
+@media (max-width: 1400px) {
+  html {
+    font-size: 50%;
+  }
+
+  .section-2 {
+    height: auto;
+  }
+
+  .cards-container {
+    margin-top: 10rem;
+  }
+
+  .gallery-link {
+    width: 40rem;
+    height: 25rem;
+    margin: 5rem;
+  }
+
+  .food-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section-heading {
+    font-size: 9rem;
+    margin: 0 5rem;
+  }
+
+  .section-1-icons i {
+    font-size: 25rem;
+  }
+
+  .cards-container {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 5rem;
+  }
+
+  .section-4 {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar-link {
+    margin: 2rem;
+  }
+
+  .navbar-link i {
+    font-size: 4rem;
+  }
+
+  .navbar-link span {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-heading {
+    font-size: 7rem;
+    margin: 0 10rem;
+  }
+
+  .section-1-icons i {
+    font-size: 20rem;
+  }
+
+  .menu {
+    left: 2rem;
+  }
+
+  .section-4 {
+    height: 40rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .section-4-text {
+    margin-bottom: 8rem;
+  }
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 40%;
+  }
+
+  .navbar-link {
+    margin: 0 0.7rem;
+  }
+}
+/* End of Responsive */
+    </style>
+</head>
+<body>
+
+    <!-- Navbar  -->
+    <nav class="navbar target">
+        <a href="#future-topics" class="navbar-link">
+            <i class="fas fa-calendar-check"></i>
+            <span>FutureTopics</span>
+        </a>
+        <a href="#core-topics" class="navbar-link">
+            <i class="fas fa-code-branch"></i>
+            <span>3CoreTopics</span>
+        </a>
+        <a href="#gallery" class="navbar-link">
+            <i class="fas fa-images"></i>
+            <span>Gallery</span>
+        </a>
+
+        <a href="index.html" class="navbar-link">
+            <i class="fas fa-laptop-house"></i>
+            <span>Back to Museum</span>
+        </a>
+    </nav>
+    <div class="menu target"></div>
+    <!-- End of Navbar  -->
+
+    <div class="container">
+        <!-- Section 1 -->
+        <section class="section-1" id="future-topics">
+            <h1 class="section-heading">10 Future Topics</h1>
+          <div class="section-1-icons">
+              <i class="change fas fa-wrench"> change in jobs</i>
+              <i class="fas fa-users"> population developments</i>
+              <i class="fas fa-charging-station"> <br>energy & resources</i>
+              <i class="fas fa-user-md"> health care</i>
+              <i class="fas fa-globe-americas"> globalization & global risks</i>
+              <i class="fas fa-digital-tachograph"> IT & digitization</i>
+              <i class="fas fa-smog"><br>climate change</i>
+              <i class="fas fa-car"> growing mobility & logistics needs</i>
+              <i class="fas fa-brain"> intelligent products & infrastructures</i>
+              <i class="fas fa-city"> urbanization</i>
+            </div>
+        </section>
+        <!-- End Section 1 -->
+
+        <!-- Section 2 -->
+        <section class="section-2" id="core-topics">
+            <h1  class="section-heading1">3 Core Topics</h1>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="card-img-1.png" class="card-img" />
+                    <h3 class="card-name">Digitali- <br>zation</h3>
+                    <button class="card-btn" onclick=location.href="digitalization.html">Dive in</button>
+                </div>
+                <div class="card">
+                    <img src="card-img-2.png" class="card-img" />
+                    <h3 class="card-name">Robotics & Machine Learning</h3>
+                    <button class="card-btn" onclick=location.href="robotics.html">Dive in</button>
+                </div>
+                <div class="card">
+                    <img src="card-img-3.png" class="card-img" />
+                    <h3 class="card-name">AI - artificial intelli- <br>gence</h3>
+                    <button class="card-btn" onclick=location.href="ai.html">Dive in</button>
+                </div>
+            </div>
+        </section>
+        <!-- End of Section 2 -->
+
+        <!-- Section 3 -->
+        <section class="section-3" id="gallery">
+            <h1 class="section-heading">Gallery </h1>
+            <div class="gallery">
+                <a href="#" class="gallery-link" title="Order Now">
+                    <img  src="future1.jpg"  class="food-img" />
+                    <h3 class="food-name">Eleanor Roosevelt</h3>
+                    <p class="food-description">
+                        “The future belongs to those who believe in the beauty of their dreams.”
+                    </p>
+                </a>
+                <a href="#" class="gallery-link" title="Order Now">
+                    <img  src="future2.jpg"  class="food-img" />
+                    <h3 class="food-name">Soeren Kierkegaard </h3>
+                    <p class="food-description">
+                        “Life can only be understood backwards; but it must be lived forwards.”
+                    </p>
+                </a>
+                <a href="#" class="gallery-link" title="Order Now">
+                    <img  src="future3.jpg" class="food-img" />
+                    <h3 class="food-name">Jay Asher</h3>
+                    <p class="food-description">
+                        “You can't stop the future You can't rewind the past The only way to learn the secret ...is to press play.”
+                    </p>
+                </a>
+                <a href="#" class="gallery-link" title="Order Now">
+                    <img  src="future4.jpg"  class="food-img" />
+                    <h3 class="food-name">Roy T. Bennett</h3>
+                    <p class="food-description">
+                        "Once you realize you deserve a bright future, letting go of your dark past is the best choice you will ever make."
+                    </p>
+                </a>
+                <a href="#" class="gallery-link" title="Order Now">
+                    <img src="future5.jpg" class="food-img" />
+                    <h3 class="food-name">Buckminster Fuller</h3>
+                    <p class="food-description">
+                        “You never change things by fighting the existing reality. To change something, build a new model that makes the existing model obsolete.”
+                    </p>
+                </a>
+                <a href="#" class="gallery-link" title="Order Now">
+                    <img  src="future6.jpg"  class="food-img" />
+                    <h3 class="food-name">Chuck Palahniuk</h3>
+                    <p class="food-description">
+                        “You realize that our mistrust of the future makes it hard to give up the past.”
+                    </p>
+                </a>
+            </div>
+        </section>
+        <!-- End of Section 3 -->
+
+        <!-- Section 4 -->
+        <section class="section-4">
+            <div class="section-4-text">
+                <h2 class="section-4-heading">Thanks for your visit.</h2>
+                <p class="section-4-paragraph">
+                    You have reached the end of the museum. You either can leave...or start again.
+                </p>
+            </div>
+            <form class="signup-form ">
+                <input
+                   placeholder="Back to start."/>
+                <button type="submit" class="signup-form-btn">
+                      <a href="index.html" style="color:#a79a2d;">
+                      >></a>
+                </button>
+            </form>
+
+        </section>
+        <!-- End of Section 4 -->
+        </div>
+        <script>
+            document.querySelector('.menu').addEventListener('click', () => {
+	document.querySelectorAll('.target').forEach((item) => {
+		item.classList.toggle('change');
+	})
+})
+
+const icons = document.querySelectorAll('.section-1-icons i')
+let i = 1
+
+setInterval(() => {
+	i++
+	const icon = document.querySelector('.section-1-icons .change')
+	icon.classList.remove('change')
+
+	if (i > icons.length) {
+		icons[0].classList.add('change')
+		i = 1
+	} else {
+		icon.nextElementSibling.classList.add('change')
+	}
+}, 2500)
+
+        </script>
+</body>
+</html>

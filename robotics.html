@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+     <title>Robotics</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color:black;
+      background-image:
+      radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+      radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+      radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+      radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+      background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+      background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+      font-family: 'Staatliches', cursive;
+    }
+    h1 {
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    .container {
+        height: 100vh;
+        width: 100%;
+        color: #F4EEA9;
+
+        }
+     .space {
+            width: 350px;
+            height: 200px;
+            margin-left: 50%
+
+     }
+     .movie {
+            margin: 10px;
+            left: 50%;
+
+      }
+    video {
+            width: 350px;
+            height: 180px;
+            object-fit: cover;
+            z-index: -100;
+            margin: 2px auto;
+            left: 50%;
+    }
+
+.myButton {
+	box-shadow:inset 0px -3px 7px 0px #29bbff;
+	background-color:transparent;
+	border-radius:3px;
+	border:1px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#F4EEA9;
+	font-family:Arial;
+	font-size:15px;
+	padding:9px 28px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+.myButton:hover {
+	background-color:transparent;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.hint {
+      color: #F4EEA9;
+      text-decoration: none;
+      font-size: 1.5rem;
+}
+span {
+      font-size: 1.5rem;
+      text-align: right;
+}
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>New installations of industrial robots in 2020 <small>(source is Statista):</small></h1>
+  <header>
+  <div class="movie">
+    <span class="space">Electronics industry.… 109 TUnits</span><video id="myVideo1" src="robotics1.mp4">Move it.</video>
+    <br>
+
+  </div>
+ <div class="movie">
+   <span class="space">Automotive industry.….. 80 TUnits</span> <video id="myVideo3" src="robotics3.mp4">Move it.</video>
+    <br>
+  </div>
+     <div class="movie">
+    <span class="space">Machinery industry.………. 41 TUnits</span><video id="myVideo5" src="robotics5.mp4">Move it.</video>
+    <br>
+    </div>
+     <div class="movie">
+    <span class="space">and other industries.… 117 TUnits</span><video id="myVideo2" src="robotics2.mp4">Move it.</video>
+    <br>
+    <span class="space" style="opacity:0;">and other industries:… 117 TUnits</span><button class="myButton" onclick="playVid1()">Play</button> <button class="myButton" onclick="playVid3()">Play</button> <button class="myButton" onclick="playVid5()">Play</button>
+       <button class="myButton" onclick="playVid2()">Play</button>
+       <br> <a class="hint" href="future.html" role="button">click here to go back to the future floor &raquo;</a>
+  </div>
+  </header>
+</div>
+<script>
+var vid1 = document.getElementById("myVideo1");
+
+function playVid1() {
+    vid1.play();
+}
+
+function pauseVid1() {
+    vid1.pause();
+}
+
+var vid3 = document.getElementById("myVideo3");
+
+function playVid3() {
+    vid3.play();
+}
+
+function pauseVid3() {
+    vid3.pause();
+}
+var vid5 = document.getElementById("myVideo5");
+
+function playVid5() {
+    vid5.play();
+}
+
+function pauseVid5() {
+    vid5.pause();
+}
+var vid2 = document.getElementById("myVideo2");
+
+function playVid2() {
+    vid2.play();
+}
+
+function pauseVid2() {
+    vid2.pause();
+}
+</script>
+</body>
+
+</html>

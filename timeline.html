@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <style>
+        /* Section 1 a Time Line */
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+*{
+  border:0;
+  margin:0;
+  box-sizing:border-box;
+  transition:all .25s ease;
+}
+body {
+    background-image: url(timeline.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    padding:40px;
+    text-align: center;
+    color: yellow;
+    font-family: 'Pushster', cursive;
+    font-size: 4rem;
+}
+
+#timeLine{
+    height:100px;
+   width: 100vw;
+    margin:650px 0 0 0;
+   padding:0 20%;
+   border-top: 1.5px dotted darkred;
+   overflow-x: auto;
+   overflow-y:hidden;
+
+/*   padding:20px 0; */
+
+}
+#timeLine li{
+  font-size:1.5em;
+  width:15%;
+  position:relative;
+  color: #F6E207;
+  top:-50px;
+  transform-origin:left center;
+  transform: rotate(70deg);
+  display:inline-block;
+
+/*   background-color:green; */
+  flex:none;
+}
+#timeLine li:hover{
+  color: #E1FBFC;
+}
+#timeLine li:before{
+  content:"\25BA";
+  font-size:1.5em;
+  line-height:0em;
+  color: yellow;
+  position:relative;
+  top:5px;
+ }
+#timeLine li:hover:before{
+  left: 5px;
+   color: #F38272;
+}
+#timeLine ul{
+  display:flex;
+  width:auto;
+  height:200px;
+  justify-content: space-between;
+}
+#readOut{
+   background-color:rgba(0,0,0,.35);
+   height:80px;
+   position:fixed;
+   color:white;
+   font-size:1.25em;
+   padding:20px;
+   overflow:visible;
+   top:505px;
+   left:20%;
+   border-radius:20px;
+}
+#readOut:after{
+   content:"\25bc";
+   display:block;
+   font-size:2em;
+    position:relative;
+   left:0;
+   bottom:-26px;
+   color: rgba(0,0,0,.35);
+}
+.showPop{
+   animation: popUp .5s forwards cubic-bezier(0.25, 0.1, 0.88, 1.45);
+}
+hidePop{
+   animation: popUp .5s reverse cubic-bezier(0.25, 0.1, 0.88, 1.45);
+}
+
+@keyframes popUp{
+   from{
+      transform:scale(0);
+      opacity:0;
+   }
+   to{
+      opacity:1;
+   }
+}
+
+/* End of Section 1 a Time Line */
+    </style>
+</head>
+<body>
+
+ <!--Section 1a Time Line -->
+      <section class="section-1a" id="time-line">
+       <h1>Time is nothing but relative.</h1>
+<div id="readOut"></div>
+<div id="timeLine">
+  <ul>
+    <a href="#" ><li>-4.6bn</li></a>
+    <a href="#" ><li>-2.5bn</li></a>
+   <a href="#" ><li>-541mio</li></a>
+   <a href="#" ><li>-485mio</li></a>
+    <a href="#" ><li>-443mio</li></a>
+    <a href="#" ><li>-419mio</li></a>
+    <a href="#" ><li>-359mio</li></a>
+   <a href="#" ><li>-299mio</li></a>
+   <a href="#" ><li>-252mio</li></a>
+    <a href="#" ><li>-201mio</li></a>
+     <a href="#" ><li>-145mio</li></a>
+    <a href="#" ><li>-65mio</li></a>
+   <a href="#" ><li>-2.6mio</li></a>
+   <a href="#" ><li>-12000</li></a>
+      <a href="#" ><li>~0</li></a>
+    <a href="#" ><li>~2021</li></a>
+    <a href="index.html" ><li>..leave</li></a>
+   </ul>
+
+</div>
+      </section>
+      <!-- End of Section 1a Time Line -->
+  <script>
+      // Section Time Line //
+
+var ticks = document.getElementsByTagName("li"),
+      pop = document.getElementById("readOut"),
+      scrolly= document.querySelector("#timeLine");
+var myData={
+   1:"Archean - The earth formed 4.6 billion years ago, together with the sun and the other planets in our solar system, as a glowing ball of fire from a cloud of gas.",
+   2: "Proterozoic - Oxygen is created and thus the basis for life.",
+   3: "As a Cambrian explosion -Life only happened in the oceans. There were worms, sponges, arthropods, and cnidarians.",
+   4: "Ordovician - due to sudden drops in temperature, there was a mass extinction within the animal world of that time.",
+   5: "Silurian - there are bony fish in the seas and oceans for the first time. Lichen appear on the mainland.",
+   6: "Devonian - the first vertebrates leave the water, at least temporarily, and live on earth.",
+   7: "Carbon - the proportion of oxygen in the air was 35% and thus around 14% higher than today. This encouraged the development of insects that reached wingspans of more than half a meter.",
+   8: "Perms - mass extinction on earth. The temperature rose by more than 10 ° C within 200,000 years. Between 70% and 90% of marine life fell victim to mass extinction.",
+   9: "Triassic - the first dinosaurs appeared on earth.",
+   10: "Jurassic - is largely shaped by dinosaurs. For the first time in the history of the earth, primeval mammals also appear.",
+   11: "Cretaceous - Dinosaur Extinction. Increased volcanic activity.",
+   12: "Tertiary - The Australopithecus, probably our earliest relative of the great ape family, appears for the first time.",
+   13: "Quaternary - Homo sapiens appeared for the first time 200,000 years ago.",
+   14: "The Holocene is the most recent chapter in the history of the earth and began with the gradual warming of the earth at the end of the Pleistocene, the last ice age.",
+   15: "Oh Jesus!",
+   16: "See, we as human beings are still very young.",
+   17: ""
+}
+   for (var i=0; i<ticks.length; i++){
+   ticks[i].setAttribute("data-info", myData[1+i]);
+
+      ticks[i].addEventListener("click",function(e){
+   pop.innerHTML = this.getAttribute("data-info");
+
+         //alert(window.innerWidth);
+   scrolly.scrollLeft=this.offsetLeft-(window.innerWidth*.25);
+});
+
+}
+
+  </script>
+</body>
+
+</html>
