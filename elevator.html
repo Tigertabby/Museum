@@ -313,14 +313,14 @@ html {
   font-size: 10rem;
   font-family: "Oswald", sans-serif;
   font-weight: 300;
-  color:  #F3ED9E; /*#ddd;*/
+  color:  #ddd;
   margin-right: 4rem;
 }
 
 .section-heading-line {
   width: 15rem;
   height: 0.2rem;
-  background-color:   #F3ED9E; /*#ddd;*/
+  background-color: #ddd;
 }
 
 .video-wrapper {
@@ -408,15 +408,15 @@ html {
 
 .fa-quote-left {
   align-self: flex-start;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #bbb;
   margin-bottom: 2rem;
 }
 
 .fa-quote-right {
   align-self: flex-end;
-  font-size: 2rem;
-  color: #bbb;
+  font-size: 3rem;
+  color:  #bbb;
 }
 
 /* End of Section 2 */
@@ -432,9 +432,14 @@ html {
     linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
     linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
     background-size: 13px, 29px, 37px, 53px;
+   margin: 0;
+  padding: 0;
+  background-image: url(elevator.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  padding-left: 10rem;
+  /*padding-left: 10rem;*/
 
 }
 
@@ -809,7 +814,7 @@ html {
       <div class="navbar-logo">
         <a href="#">
           Time<span>M</span>useum </a> <br>
-        <a id="back-to-library" href="https://tigertabby.github.io/Tigertabby3.github.io/library.html">Back to library</a>
+        <a id="back-to-library" href="index.html">Back to start.</a>
       </div>
      <div class="nav-list">
           <a href="#" class="nav-link"></a>
@@ -830,50 +835,151 @@ html {
     <!-- End of Menu -->
     
     <div class="container">
-      <!-- Section 1 -->
-      <section class="section-1" id="home">
-        <div class="banner">
-          <h1 class="banner-heading">
-            <span class="heading-1">Yesterday = past,</span>
-            <span class="heading-2">tomorrow = future, </span>
-            <span class="heading-3">today = gift, </span>
-            <span class="heading-4"> and called: present! </span>
-
-            <p style="color:#FF5677; font-size:3rem; padding:5px; text-shadow: 5px 5px 5px #000;"><em>quote by Bil Keane</em></p>
-          </h1>
-          <p class="banner-paragraph">Invest time <br>to learn more about it.</p>
-          <button class="banner-btn">To enter the museum <br>scroll down!</button>
-        </div>
-      </section>
-      <!-- End of Section 1 -->
 
 
-      <!-- Section 2 -->
-      <section class="section-2" id="about-us">
-          <h1 class="section-heading">Welcome<br><span class="section-heading" style="color:#FFFCDC;" onclick=location.href="elevator.html">Click here.</span></h1>
-          <div class="section-heading-line"></div>
-          <div class="video-wrapper">
-            <video src="MatBrown.mp4" class="video"></video>
-            <div class="controls">
-              <div class="video-bar-wrapper">
-                <div class="video-bar"></div>
-              </div>
-              <div class="buttons">
-                <button id="play-pause">
-                  <i class="far fa-play-circle"></i>
-                </button>
-              </div>
+      <!-- Section 3 -->
+      <section class="section-3" id="pricing">
+        <h1 class="section-heading"> Overview:</h1>
+      <!--  <div class="section-heading-line"></div> -->
+        <div class="swiper-container">
+        <div class="pricing-cards-wrapper swiper-wrapper">
+          <div class="pricing-card swiper-slide">
+            <div class="pricing-card-front">
+              <h1 class="pricing-card-heading heading-free">Time modules.</h1>
+              <h3 class="pricing-card-price"><small>The past.</small></h3>
+              <ul class="pricing-card-list list-free">
+                <li>
+                  <i class="fas fa-check"></i>
+                 <span>Archean</span>
+                </li>
+                 <li>
+                  <i class="fas fa-check"></i>
+                 <span>Proterozoic</span>
+                </li>
+                  <li>
+                  <i class="fas fa-check"></i>
+                  <span>Cambrian, Ordovician</span>
+                </li>
+                <i class="fas fa-check"></i>
+                  <span>Silurian, Devon</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Carbon, Perm</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>etc. until Holocene</span>
+                </li>
+              </ul>
+              <button class="pricing-card-btn btn-free" onclick=location.href="timeline.html">1st floor.</button>
             </div>
+          <!--  <div class="pricing-card-back back-free">
+              <a href="timeline.html">CLICK HERE <br>to get to the first floor.</a>
+            </div> -->
           </div>
-          <p class="section-2-paragraph">
-            <i class="fas fa-quote-left"></i>
-            Don't be fooled by the calendar. There are only as many days in the year as you make use of.<br> One man gets only a week's value out of a year while another man gets a full year's value out of a week. <em>Charles Richards </em>
-            <i class="fas fa-quote-right"></i>
-          </p>      
-        </section>
-      <!-- End of Section 2 -->
+          <div class="pricing-card swiper-slide">
+            <div class="pricing-card-front">
+              <h1 class="pricing-card-heading heading-basic">Buildings</h1>
+              <h3 class="pricing-card-price">It`s big.</h3>
+              <ul class="pricing-card-list list-basic">
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Impressing clocks.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Big Ben</span>
+                </li>
+                 <li>
+                  <i class="fas fa-check"></i>
+                  <span>The world-time clock.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Sun clocks.</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Church clocks.</span>
+                </li>
+              </ul>
+              <button class="pricing-card-btn btn-basic" onclick=location.href="big.html">2nd floor.</button>
+            </div>
+           <!-- <div class="pricing-card-back back-basic">
+              <a href="big.html">CLICK HERE <br>to get to the 2nd floor.</a>
+            </div> -->
+          </div>
+          <div class="pricing-card swiper-slide">
+            <div class="pricing-card-front">
+              <h1 class="pricing-card-heading heading-standard">Smaller Collections</h1>
+              <h3 class="pricing-card-price">Petit.</h3>
+              <ul class="pricing-card-list list-standard">
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pocket watch</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Inside the clock</span>
+                </li>
+                 <li>
+                  <i class="fas fa-check"></i>
+                  <span>Build your own watch</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pawnbroker`s shop</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Watch Gallery</span>
+                </li>
+              </ul>
 
-     
+              <button class="pricing-card-btn btn-standard" onclick=location.href="petit.html">3rd floor.</button>
+            </div>
+          <!--  <div class="pricing-card-back back-standard">
+                <a href="petit.html">CLICK HERE <br>to get to the 3rd floor.</a>
+            </div> -->
+          </div>
+          <div class="pricing-card swiper-slide">
+            <div class="pricing-card-front">
+              <h1 class="pricing-card-heading heading-premium">Aspects of Life</h1>
+              <h3 class="pricing-card-price">Future.</h3>
+              <ul class="pricing-card-list list-premium">
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Gallery</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Artificial Intelligence</span>
+                </li>
+                 <li>
+                  <i class="fas fa-check"></i>
+                  <span>Robotics</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>MachineLearning</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Digitalization</span>
+                </li>
+              </ul>
+              <button class="pricing-card-btn btn-premium" onclick=location.href="future.html">4th floor.</button>
+            </div>
+           <!-- <div class="pricing-card-back back-premium">
+             <a href="future.html">CLICK HERE <br>to get to the 4th floor.</a>
+            </div> -->
+          </div>
+        </div>
+
+      </div>
+      </section>
+      <!-- End of Section 3 -->
  <footer>
    <div class="end"></div>
 
